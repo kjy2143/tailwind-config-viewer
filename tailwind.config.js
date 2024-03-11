@@ -6,6 +6,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        inherit: 'inherit',
+        current: 'currentColor',
+        transparent: 'transparent',
+        black: '#000',
+        white: '#fff',
         midnight: '#0f0f17'
       },
       spacing: {

@@ -1,7 +1,7 @@
 <template>
   <div>
     <StickySectionHeader id="section-transitions">
-      <div class="md:flex items-center">
+      <div class="items-center md:flex">
         <div class="mb-2 md:mb-0 md:mr-4">
           <CanvasBlockLabel
             :label="`duration-${selectedDurationKey}`"
@@ -46,7 +46,7 @@
             v-for="(value, key) in data.timing"
             :key="key"
           >
-            <CanvasSectionRow class="transition-container relative" v-slot="{blockClasses}">
+            <CanvasSectionRow class="relative transition-container" v-slot="{blockClasses}">
               <div
                 :class="['transition-container__block absolute w-28', blockClasses]"
                 :style="{
@@ -57,7 +57,7 @@
               </div>
             </CanvasSectionRow>
 
-            <div class="sm:flex mb-2 sm:mb-0 sm:divide-x">
+            <div class="mb-2 sm:flex sm:mb-0 sm:divide-x">
               <CanvasBlockLabel
                 :label="removeDefaultSuffix(`ease-${key}`)"
                 :value="value"
@@ -98,8 +98,8 @@ export default {
 
   data () {
     return {
-      selectedDurationKey: Object.keys(this.data.duration)[0],
-      selectedDelayKey: Object.keys(this.data.delay)[0],
+      selectedDurationKey: Object.keys(this.data.duration)[4],
+      selectedDelayKey: Object.keys(this.data.delay)[4],
       enableDelay: false
     }
   },

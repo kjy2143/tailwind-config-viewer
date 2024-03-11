@@ -1,6 +1,6 @@
 <template>
   <div
-    class="mb-2 h-28"
+    class="h-8 mb-2"
     :class="{
       'bg-gray-200 dark:bg-gray-800': hasBg
     }"
@@ -21,7 +21,7 @@ export default {
 
   data () {
     return {
-      blockClasses: 'bg-gray-500 dark:bg-gray-700 h-28'
+      blockClasses: 'bg-gray-500 dark:bg-gray-700 h-8'
     }
   }
 }

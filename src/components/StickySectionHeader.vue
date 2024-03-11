@@ -1,7 +1,7 @@
 <template>
-  <div class="block z-50 sticky-section-header top-0" :class="this.id">
+  <div class="top-0 z-50 block sticky-section-header" :class="this.id">
     <div
-        class="sm:inline-block duration-150 p-3 -mt-3 -mx-3 rounded-lg"
+        class="w-full p-3 -mx-3 -mt-3 duration-150 rounded-lg sm:inline-block"
         :class="{
           'stuck shadow-xl bg-white dark:bg-midnight bg-opacity-75 dark:bg-opacity-75': stuck
         }"

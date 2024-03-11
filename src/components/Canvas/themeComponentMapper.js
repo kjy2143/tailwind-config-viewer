@@ -14,6 +14,18 @@ export default function themeComponentMapper (theme) {
       }
     },
     {
+      themeKey: 'opacity',
+      component: 'Opacity',
+      title: 'Opacity',
+      data: theme.opacity
+    },
+    {
+      themeKey: 'boxShadow',
+      component: 'Shadows',
+      title: 'Shadows',
+      data: theme.boxShadow
+    },
+    {
       themeKey: 'spacing',
       component: 'Spacing',
       title: 'Spacing',
@@ -65,24 +77,6 @@ export default function themeComponentMapper (theme) {
       }
     },
     {
-      themeKey: 'screens',
-      component: 'Screens',
-      title: 'Screens',
-      data: theme.screens
-    },
-    {
-      themeKey: 'boxShadow',
-      component: 'Shadows',
-      title: 'Shadows',
-      data: theme.boxShadow
-    },
-    {
-      themeKey: 'opacity',
-      component: 'Opacity',
-      title: 'Opacity',
-      data: theme.opacity
-    },
-    {
       themeKey: 'borderRadius',
       component: 'BorderRadius',
       title: 'Border Radius',
@@ -95,14 +89,10 @@ export default function themeComponentMapper (theme) {
       data: theme.borderWidth
     },
     {
-      themeKey: 'transitionTimingFunction',
-      component: 'Transitions',
-      title: 'Transitions',
-      data: {
-        timing: theme.transitionTimingFunction,
-        duration: theme.transitionDuration,
-        delay: theme.transitionDelay
-      }
+      themeKey: 'width',
+      component: 'Width',
+      title: 'Width',
+      data: theme.width
     },
     {
       themeKey: 'minWidth',
@@ -111,22 +101,10 @@ export default function themeComponentMapper (theme) {
       data: theme.minWidth
     },
     {
-      themeKey: 'width',
-      component: 'Width',
-      title: 'Width',
-      data: theme.width
-    },
-    {
       themeKey: 'maxWidth',
       component: 'MaxWidth',
       title: 'Max Width',
       data: theme.maxWidth
-    },
-    {
-      themeKey: 'minHeight',
-      component: 'MinHeight',
-      title: 'Min Height',
-      data: theme.minHeight
     },
     {
       themeKey: 'height',
@@ -135,10 +113,32 @@ export default function themeComponentMapper (theme) {
       data: theme.height
     },
     {
+      themeKey: 'minHeight',
+      component: 'MinHeight',
+      title: 'Min Height',
+      data: theme.minHeight
+    },
+    {
       themeKey: 'maxHeight',
       component: 'MaxHeight',
       title: 'Max Height',
       data: theme.maxHeight
+    },
+    {
+      themeKey: 'screens',
+      component: 'Screens',
+      title: 'Breakpoints',
+      data: theme.screens
+    },
+    {
+      themeKey: 'transitionTimingFunction',
+      component: 'Transitions',
+      title: 'Transitions',
+      data: {
+        timing: theme.transitionTimingFunction,
+        duration: theme.transitionDuration,
+        delay: theme.transitionDelay
+      }
     }
   ].filter(({ themeKey }) => theme[themeKey])
 }

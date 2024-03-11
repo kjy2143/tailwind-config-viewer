@@ -4,11 +4,11 @@
       v-if="!config"
       style="height: calc(100vh - 63px);"
       class="flex items-center justify-center">
-        <p class="text-gray-600 text-center font-bold">Loading Config...</p>
+        <p class="font-bold text-center text-gray-600">Loading Config...</p>
     </div>
     <template v-if="config">
-      <div class="pt-8 px-3 flex">
-        <div class="hidden md:block flex-none h-full overflow-y-auto top-0 sticky max-h-screen pt-2">
+      <div class="flex px-3 pt-8">
+        <div class="sticky top-0 flex-none hidden h-full max-h-screen pt-2 overflow-y-auto md:block">
           <ToggleSwitch
             name="dark-mode"
             class="mb-3 ml-3"
@@ -17,17 +17,17 @@
             label="Dark Mode"
           />
           <div class="ml-3 text-sm text-gray-700 dark:text-gray-500">Tailwind v{{ config.tailwindVersion }}</div>
-          <nav class="pt-3 pr-20 pb-12 px-3 h-full">
+          <nav class="h-full px-3 pt-3 pb-12 pr-20">
             <a
               v-for="section in configTransformed"
               :key="section.title"
               :href="`#${section.title}`"
-              class="relative flex items-center py-2 hover:text-gray-900 dark-hover:text-gray-200 text-base rounded-sm"
+              class="relative flex items-center py-2 text-base rounded-sm hover:text-gray-900 dark-hover:text-gray-200"
               :class="[activeSection === section ? 'text-gray-900 dark:text-gray-200' : 'text-gray-700 dark:text-gray-500']"
               @click="setActiveSection(section)"
             >
               <div
-                class="absolute rounded-full bg-gray-500 dark:bg-gray-600 transition duration-200"
+                class="absolute transition duration-200 bg-gray-500 rounded-full dark:bg-gray-600"
                 :class="[activeSection === section ? 'visible opacity-100' : 'invisible opacity-0']"
                 :style="{width: '5px', height: '5px', left: '-12px'}"
               />
