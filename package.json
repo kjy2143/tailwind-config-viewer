@@ -35,7 +35,7 @@
     "lib"
   ],
   "engines": {
-    "node": ">=8"
+    "node": "14.x || 16.x"
   },
   "dependencies": {
     "@koa/router": "^12.0.1",
